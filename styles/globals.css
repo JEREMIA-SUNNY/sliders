@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  
+  overflow-x: hidden;
+}
+.swiper-button-prev {
+  color: white !important; 
+}
+
+.swiper-button-next {
+  color: white !important; 
+}
+
+.swiper-pagination-bullet {
+  background-color: white !important;
+}
+
+.debug * {
+  box-sizing: border-box;
+  background: rgb(0 100 0/0.1) !important;
+  /* outline: 1px solid yellow !important; */
+}
