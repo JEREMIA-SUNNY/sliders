@@ -1,63 +1,57 @@
-import Link from "next/link";
 import Image from "next/image";
-import { Navigation, Pagination, Autoplay } from "swiper";
+import { Navigation, Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect, useState } from "react";
+import { EffectCoverflow, Pagination } from "swiper";
 
-export default function Slider() {
+export default function Slider2() {
+  useEffect(() => {
+    AOS.init({
+      once: true,
+      duration: 1000,
+      startEvent: "DOMContentLoaded",
+      initClassName: "aos-init",
+      animatedClassName: "aos-animate",
+    });
+  }, []);
   const slides = [
     {
-      text1: " Movement through yoga",
-      text2: "",
-      image: "/newslider/aerial2.jpg",
+      text1:
+        "When there is a World Cup the world stops, the country stops, everyone is hugging each other, whether old or young, everyone stops just to enjoy the football.",
+
+      image: "4.jpg",
       id: "slide1",
     },
     {
-      text1: "Grace in every step",
-      text2: "",
-      image: "/newslider/beach.jpg",
+      text1:
+        "The tournament kicked off on Sunday, November 20 at the Al Bayt Stadium, where hosts Qatar lost 2-0 to Ecuador in Group A.",
+
+      image: "5.jpg",
       id: "slide2",
     },
-    
     {
-      text1: "Balance off the mat",
-      text2: "",
-      image: "/newslider/aerialyoga.jpg",
+      text1:
+        "Since then, the group stages have continued, with England thrashing Iran 6-2 and Saudi Arabia shockingly beating Argentina 2-1.",
+
+      image: "6.jpg",
+      id: "slide3",
+    },
+    {
+      text1:
+        "You have to show up in the World Cup, and in the World Cup anything can happen.” – Lionel Messi",
+
+      image: "7.jpg",
       id: "slide4",
     },
-    {
-      text1: " Rise from within",
-      text2: "",
-      image: "/newslider/bridgepose.jpg",
-      id: "slide5",
-    },
-    {
-      text1: " Beyond skin deep",
-      text2: "",
-      image: "/newslider/cobrapose.jpg",
-      id: "slide6",
-    },
-    {
-      text1: "Still inside, flow outside",
-      text2: "",
-      image: "/newslider/headstand.jpg",
-      id: "slide7",
-    },
-    {
-      text1: "Slow and steady",
-      text2: "",
-      image: "/newslider/trikonasana.jpg",
-      id: "slide8",
-    },
-    {
-      text1: "Power through change",
-      text2: "",
-      image: "/newslider/warrior.jpg",
-      id: "slide9"
-    }
   ];
 
   return (
@@ -65,35 +59,42 @@ export default function Slider() {
       {/* <div className="w-full h-[60vh] flex overflow-x-auto snap-mandatory snap-x scrollbar-hide"> */}
       <div className="w-full">
         <Swiper
-          modules={[Navigation, Pagination, Autoplay]}
-          slidesPerView={1}
+          modules={[EffectCoverflow, Pagination, Autoplay]}
+          effect={"coverflow"}
           navigation={false}
           autoplay={true}
           loop={true}
-          speed={1000}
-          pagination={{ clickable: true }}
+          speed={800}
+          coverflowEffect={{
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+          }}
+          className="mySwiper"
 
           // onSlideChange={() => console.log('slide change')}
           // onSwiper={(swiper) => console.log(swiper)}
         >
-          {slides.map(({ text1, text2, image, id }) => (
+          {slides.map(({ text1, image, id }) => (
             <SwiperSlide key={id}>
-              <div className="h-[650px]  w-full relative flex justify-center items-center">
+              <div
+                data-aos="fade-down"
+                data-aos-once="true"
+                className="h-[100vh] w-full relative flex justify-center items-center"
+              >
                 <Image
-                  className="object-cover w-full brightness-75 h-full"
+                  className="object-cover w-full h-full"
                   layout="fill"
                   src={image}
                   alt=""
-                  unoptimized={true}
                 />
                 <div className="absolute inset-0 bg-green opacity-20"></div>
-                <div className="px-4 md:container text-center z-50">
-                  <h1 className="text-2xl md:text-4xl font-medium font-bah text-white drop-shadow-md py-4">
+                <div className="px-4 md:container bg-white rounded-lg  text-center z-50">
+                  <h1 className="text-2xl   text-black drop-shadow-md py-4">
                     {text1}
                   </h1>
-                  <h2 className="text-white leading-snug font-semibold text-2xl md:text-3xl font-bah drop-shadow-md">
-                    {text2}
-                  </h2>
                 </div>
               </div>
             </SwiperSlide>

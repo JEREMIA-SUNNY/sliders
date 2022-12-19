@@ -5,46 +5,48 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Fixeddiv from "../components/fixediv";
 import { useRouter } from "next/router";
+import CoreStyles from 'react-awesome-slider/src/core/styles.scss';
 
 function MyApp({ Component, pageProps }) {
-  const [soicalmedia, setSocialmedia] = useState(false);
-  const [showModal, setShowModal] = useState(false);
-  const route = useRouter();
-  useEffect(() => {
-    const timeId = setTimeout(() => setShowModal(true), 3000);
+  // const [soicalmedia, setSocialmedia] = useState(false);
+  // const [showModal, setShowModal] = useState(false);
+  // const route = useRouter();
+  // useEffect(() => {
+  //   const timeId = setTimeout(() => setShowModal(true), 3000);
 
-    return () => clearTimeout(timeId);
-  }, []);
+  //   return () => clearTimeout(timeId);
+  // }, []);
 
-  useEffect(() => {
-    let timeId = null;
+  // useEffect(() => {
+  //   let timeId = null;
 
-    if (route.pathname !== "/connect") {
-      timeId = setTimeout(() => setSocialmedia(true), 6000);
-    } else {
-      setSocialmedia(false);
-    }
+  //   if (route.pathname !== "/connect") {
+  //     timeId = setTimeout(() => setSocialmedia(true), 6000);
+  //   } else {
+  //     setSocialmedia(false);
+  //   }
 
-    return () => {
-      if (timeId) {
-        clearTimeout(timeId);
-      }
-    };
-  }, [route.pathname]);
+  //   return () => {
+  //     if (timeId) {
+  //       clearTimeout(timeId);
+  //     }
+  //   };
+  // }, [route.pathname]);
 
-  const clicked = () => {
-    setSocialmedia(false);
-  };
+  // const clicked = () => {
+  //   setSocialmedia(false);
+  // };
 
   return (
     <Layout>
       <Head>
-        <title>Yogatease</title>
+        <title>WC2022</title>
         <meta name="description" content="Official website of YogaTease" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="messi.jpg" />
+        
       </Head>
 
-      {showModal && (
+      {/* {showModal && (
         <div
           className={`fixed flex Z-50 justify-center items-center bg-opacity-80  z-50 top-0   left-0 w-screen h-screen bg-black`}
         >
@@ -95,10 +97,10 @@ function MyApp({ Component, pageProps }) {
             </div>
           </div>
         </div>
-      )}
+      )} */}
 
       <Component {...pageProps} />
-      {soicalmedia && <Fixeddiv clicked={clicked} />}
+      {/* {soicalmedia && <Fixeddiv clicked={clicked} />} */}
     </Layout>
   );
 }

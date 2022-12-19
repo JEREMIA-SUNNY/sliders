@@ -9,14 +9,21 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@rcaferati/wac": "^1.0.0",
+    "@react-spring/web": "^9.6.1",
     "@tailwindcss/forms": "^0.5.2",
     "@tailwindcss/typography": "^0.5.2",
+    "aos": "^2.3.4",
+    "fullpage.js": "^4.0.15",
     "next": "12.3.1",
     "react": "18.2.0",
+    "react-awesome-slider": "^4.1.0",
     "react-dom": "18.2.0",
     "react-hook-form": "^7.35.0",
     "react-icons": "^4.4.0",
     "react-player": "^2.10.1",
+    "react-slick": "^0.29.0",
+    "sass": "^1.57.0",
     "sharp": "^0.30.6",
     "swiper": "^8.2.4",
     "tailwind-scrollbar-hide": "^1.1.7"

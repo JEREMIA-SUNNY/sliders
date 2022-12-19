@@ -26,58 +26,6 @@ export default function Layout({ children }) {
       name: "Home",
       path: "/",
     },
-    {
-      name: "About",
-      path: "/about",
-      // sub: [
-      //   { name: "About T&F", path: "/about#WhoWe-Are" },
-      //   { name: " Philosophy", path: "/about#Core-values" },
-      //   { name: " Leadership", path: "/about#MeetOur-Team" },
-      //   { name: " Partners", path: "/about#Contact" },
-      // ],
-    },
-
-    // {
-    //   name: "DISCOVER",
-    //   path: "/discover",
-    //   // sub: [
-    //   //   { name: "Auditing Firms ", path: "" },
-    //   //   { name: "Chartered Accountants", path: "" },
-
-    //   //   { name: "Corporations", path: "" },
-    //   //   { name: " Regulators", path: "" },
-    //   // ],
-    // },
-    // {
-    //   name: "YOGA TV",
-    //   path: "/yogatv",
-
-    // },
-    {
-      name: "CLASS",
-      path: "/class",
-    },
-
-    {
-      name: "PAUSE",
-      path: "/pause",
-      // sub: [
-      //   { name: "", path: "" },
-      //   { name: "", path: "" },
-
-      //   { name: "", path: "" },
-      //   { name: "", path: "" },
-      // ],
-    },
-
-    {
-      name: "NEWS",
-      path: "/news",
-    },
-    {
-      name: "CONNECT",
-      path: "/connect",
-    },
   ];
   const menu2 = [
     {
@@ -142,7 +90,7 @@ export default function Layout({ children }) {
 
   return (
     <>
-      <div className="w-full lg:h-[95px]">
+      {/* <div className="w-full lg:h-[95px]">
         <header
           className={`${
             navbr
@@ -247,12 +195,13 @@ export default function Layout({ children }) {
             </nav>
           </div>
         </header>
-      </div>
+      </div> */}
 
       <main className="text-zinc-900 font-sans">{children}</main>
 
-      <footer className="border  border-t mx-auto  py-6 lg:py-8">
-        <div className="flex flex-col lg:flex-row justify-center lg:justify-evenly lg:gap-x-10 items-start">
+      <footer className=" bg-[#2F2F2F]  mx-auto  py-6 lg:py-8">
+        <p className="text-center text-2xl text-white">Vamos Argentina </p>
+        {/* <div className="flex flex-col lg:flex-row justify-center lg:justify-evenly lg:gap-x-10 items-start">
           <div className="hidden md:block">
             <img
               src="/logo3foot.png"
@@ -262,41 +211,7 @@ export default function Layout({ children }) {
               height={85}
             />
           </div>
-          <div className="flex w-full  lg:w-1/2 justify-center lg:gap-20">
-            <div className="text-base  flex flex-col  lg:w-fit w-full justify-start lg:gap-0  lg:p-0 items-center text-center ">
-              <Link href="/about">
-                <a>About</a>
-              </Link>
-            </div>
-            {/* <div className="text-base  flex flex-col  lg:w-fit w-full justify-start lg:gap-0  lg:p-0 items-center text-center ">
-            <Link href="/discover">
-              <a>Discover</a>
-            </Link>
-            
-            
-            
-            </div> */}
-            <div className="text-base  flex flex-col  lg:w-fit w-full justify-start lg:gap-0  lg:p-0 items-center text-center ">
-              <Link href="/class">
-                <a>Class</a>
-              </Link>
-            </div>
-            <div className="text-base  flex flex-col font-bah  lg:p-0   text-center ">
-              <Link href="/pause">
-                <a>Pause</a>
-              </Link>
-            </div>
-            <div className="text-base  flex flex-col  lg:w-fit w-full justify-start lg:gap-0  lg:p-0 items-center text-center">
-              <Link href="/news">
-                <a>News</a>
-              </Link>
-            </div>
-            <div className="text-base  flex flex-col  lg:w-fit w-full justify-start lg:gap-0  lg:p-0 items-center text-center">
-              <Link href="/connect">
-                <a>Connect</a>
-              </Link>
-            </div>
-          </div>
+          <div className="flex w-full  lg:w-1/2 justify-center lg:gap-20"></div>
           <div className=" md:w-fit w-full  lg:p-0 pl-6 mr-6 mb-2 ">
             <p className="font-semibold md:mt-0 mt-5 text-sm pb-2 font-bah  text-black text-center md:text-center">
               FIND US ON
@@ -389,7 +304,7 @@ export default function Layout({ children }) {
             Copyright © 2022. All Rights Reserved. Designed by Deedbee Social
             Ventures.
           </p>
-        </div>
+        </div> */}
       </footer>
     </>
   );
