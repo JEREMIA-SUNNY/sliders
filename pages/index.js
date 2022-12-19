@@ -255,7 +255,7 @@ export default function Home() {
                   <div className="w-full flex justify-center">
                     <Link href={"/class"}>
                       <button className="px-6 font-bah cursor-pointer py-2 font-medium tracking-wide text-black bg-white border-2 border-black hover:bg-black hover:border-white mb-5     rounded-md  hover:text-white ">
-                        Read Mores
+                        Read Moress
                       </button>
                     </Link>
                   </div>
