@@ -41,7 +41,7 @@ function MyApp({ Component, pageProps }) {
     <Layout>
       <Head>
         <title>WC2022</title>
-        <meta name="description" content="Official website of YogaTease" />
+        <meta name="description" content="Official website of Ar" />
         <link rel="icon" href="messi.jpg" />
         
       </Head>
